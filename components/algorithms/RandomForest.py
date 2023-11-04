@@ -30,8 +30,8 @@ class RandomForestClassifierFS:
         
         Example:
           
-          from DataScratch import dataset_for_MLscratch
-          from RandomForest import RandomForestClassifierFS
+          from components.datasets.DataScratch import dataset_for_MLscratch
+          from components.algorithms.RandomForest import RandomForestClassifierFS
           from sklearn.model_selection import train_test_split
           
           df = dataset_for_MLscratch()

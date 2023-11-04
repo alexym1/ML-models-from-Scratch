@@ -66,8 +66,8 @@ class AdaBoostClassifierFS:
         
         Example:
           
-          from DataScratch import dataset_for_MLscratch
-          from AdaBoostM1 import AdaBoostClassifierFS
+          from components.datasets.DataScratch import dataset_for_MLscratch
+          from components.algorithms.AdaBoostM1 import AdaBoostClassifierFS
           from sklearn.model_selection import train_test_split
           
           df = dataset_for_MLscratch()
