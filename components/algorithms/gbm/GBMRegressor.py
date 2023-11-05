@@ -10,7 +10,7 @@ import pandas as pd
 from sklearn.tree import DecisionTreeRegressor
 
 
-class GradientBoostingMachineFS():
+class GBMRegressor():
     
     def __init__(self, ntree = 100, learning_rate = 0.1, max_depth = 1):
         self.ntree = ntree

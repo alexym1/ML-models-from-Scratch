@@ -44,7 +44,7 @@ def update_weights(w_i, alpha, y, y_pred):
     return w_i * np.exp(alpha * (np.not_equal(y, y_pred)).astype(int))
 
 
-class AdaBoostClassifierFS:
+class AdaBoostM1Classifier:
     
     def __init__(self, M=100):
         self.M = M
@@ -67,7 +67,7 @@ class AdaBoostClassifierFS:
         Example:
           
           from components.datasets.DataScratch import dataset_for_MLscratch
-          from components.algorithms.AdaBoostM1 import AdaBoostClassifierFS
+          from components.algorithms.adaboost import AdaBoostM1Classifier
           from sklearn.model_selection import train_test_split
           
           df = dataset_for_MLscratch()
@@ -75,7 +75,7 @@ class AdaBoostClassifierFS:
           y = df["Species"].to_numpy()
           
           X_train, X_test, y_train, y_test = train_test_split(X, y, train_size=0.8)
-          classifier = AdaBoostClassifierFS(M = 100)
+          classifier = AdaBoostM1Classifier(M = 100)
           classifier.fit(X_train, y_train)
           y_pred = classifier.predict(X_test)
           

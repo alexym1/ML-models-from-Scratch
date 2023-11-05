@@ -9,7 +9,7 @@ import pandas as pd
 from sklearn.tree import DecisionTreeClassifier
 
 
-class RandomForestClassifierFS:
+class RandomForestClassifier:
     
     def __init__(self, ntree=100):
         self.ntree = ntree
@@ -31,7 +31,7 @@ class RandomForestClassifierFS:
         Example:
           
           from components.datasets.DataScratch import dataset_for_MLscratch
-          from components.algorithms.RandomForest import RandomForestClassifierFS
+          from components.algorithms.randomforest import RandomForestClassifier
           from sklearn.model_selection import train_test_split
           
           df = dataset_for_MLscratch()
@@ -39,7 +39,7 @@ class RandomForestClassifierFS:
           y = df["Species"].to_numpy()
           
           X_train, X_test, y_train, y_test = train_test_split(X, y, train_size=0.8)
-          classifier = RandomForestClassifierFS(ntree = 100)
+          classifier = RandomForestClassifier(ntree = 100)
           classifier.fit(X_train, y_train)
           y_pred = classifier.predict(X_test)
           classifier.OOB(y_test,y_pred)
